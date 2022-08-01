@@ -11,11 +11,13 @@ arrowAvgValue([100, 60, 64]); // => 74.66666666666667
 ***********************************************************************/
 
 // your code here!
+const arrowAvgValue = array =>
+	array.reduce((accum, el) => accum + el, 0) / array.length;
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
-  module.exports = arrowAvgValue;
+	module.exports = arrowAvgValue;
 } catch (e) {
-  return undefined;
+	return undefined;
 }
