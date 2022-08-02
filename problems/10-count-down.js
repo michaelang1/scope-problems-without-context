@@ -31,13 +31,13 @@ Example 4:
 // your code here
 const countDownTimer = n => {
 	if (n === 0) {
-		console.log('Happy New Year!');
+		return 'Happy New Year!';
 	} else {
 		return (countDown = () => {
 			n--;
 
 			if (n === 0) {
-				console.log('Happy New Year!');
+				return 'Happy New Year!';
 			} else {
 				return countDown;
 			}

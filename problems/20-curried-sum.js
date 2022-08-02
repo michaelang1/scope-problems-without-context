@@ -47,28 +47,28 @@ const curriedSum = numArgs => {
 	let numbers = [];
 	let sum = 0;
 	// method 1: considering edge cases:
-	// return (_curriedSum = num => {
-	// 	let length = numbers.length;
-	// 	if (length < numArgs - 1) {
-	// 		numbers.push(num);
-	// 		return _curriedSum;
-	// 	} else if (length === numArgs - 1) {
-	// 		numbers.push(num);
-	// 		return (sum = numbers.reduce((accum, el) => accum + el, 0));
-	// 	} else {
-	// 		return "I can't take more numbers, so far the sum is: " + sum;
-	// 	}
-	// });
-
-	// method 2: alternative per instructions above:
 	return (_curriedSum = num => {
-		numbers.push(num);
-		if (numbers.length === numArgs) {
-			return numbers.reduce((accum, el) => accum + el, 0);
-		} else {
+		let length = numbers.length;
+		if (length < numArgs - 1) {
+			numbers.push(num);
 			return _curriedSum;
+		} else if (length === numArgs - 1) {
+			numbers.push(num);
+			return (sum = numbers.reduce((accum, el) => accum + el, 0));
+		} else {
+			return "I can't take more numbers, so far the sum is: " + sum;
 		}
 	});
+
+	// method 2: alternative per instructions above:
+	// return (_curriedSum = num => {
+	// 	numbers.push(num);
+	// 	if (numbers.length === numArgs) {
+	// 		return numbers.reduce((accum, el) => accum + el, 0);
+	// 	} else {
+	// 		return _curriedSum;
+	// 	}
+	// });
 };
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
