@@ -19,12 +19,13 @@ multiplyByFive(5); // returns 25
 ***********************************************************************/
 
 // your code here!
+const dynamicMultiply = multiplier => num => num * multiplier;
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
-  module.exports = dynamicMultiply;
+	module.exports = dynamicMultiply;
 } catch (e) {
-  // catch the ref err
-  module.exports = null;
+	// catch the ref err
+	module.exports = null;
 }

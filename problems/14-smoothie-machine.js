@@ -23,11 +23,17 @@ console.log(smoothie2("pineapple"));
 ***********************************************************************/
 
 // your code here
+const smoothieMachine = (...foods1) => {
+	return (...foods2) => {
+		foods1 = [...foods1, ...foods2];
+		return "I'm having a smoothie with " + foods1.join(' and ');
+	};
+};
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
-  module.exports = smoothieMachine;
+	module.exports = smoothieMachine;
 } catch (e) {
-  // catch the ref err
-  module.exports = null;
+	// catch the ref err
+	module.exports = null;
 }

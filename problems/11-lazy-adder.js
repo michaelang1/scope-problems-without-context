@@ -23,12 +23,22 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 ***********************************************************************/
 
 // your code here
+// const lazyAdder = num1 => {
+// 	return num2 => {
+// 		return num3 => {
+// 			return num1 + num2 + num3;
+// 		};
+// 	};
+// };
+
+//alternative one-line arrow function :
+const lazyAdder = num1 => num2 => num3 => num1 + num2 + num3;
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
-  module.exports = lazyAdder;
+	module.exports = lazyAdder;
 } catch (e) {
-  // catch the ref err
-  module.exports = null;
+	// catch the ref err
+	module.exports = null;
 }
