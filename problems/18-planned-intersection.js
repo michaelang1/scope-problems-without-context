@@ -16,12 +16,14 @@ console.log(fame(["a", "f", "z", "b"])); // returns [ 'f', 'a' ]
 *******************************************************************************/
 
 // your code here
+const plannedIntersect = array1 => array2 =>
+	array1.filter(el => array2.includes(el));
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
 
 try {
-  module.exports = plannedIntersect;
+	module.exports = plannedIntersect;
 } catch (e) {
-  // catch the ref err
-  module.exports = null;
+	// catch the ref err
+	module.exports = null;
 }

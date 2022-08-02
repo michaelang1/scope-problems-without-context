@@ -26,12 +26,26 @@ Example 3:
 ***********************************************************************/
 
 // your code here
+const coinCollector = numCoins => {
+	let coins = [];
+	return (collect = coin => {
+		if (coins.length < numCoins - 1) {
+			coins.push(coin);
+			return collect;
+		} else if (coins.length === numCoins - 1) {
+			coins.push(coin);
+			return coins;
+		} else {
+			return "I can hold no more coins, so far I've got: " + coins;
+		}
+	});
+};
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
-  module.exports = coinCollector;
+	module.exports = coinCollector;
 } catch (e) {
-  // catch the ref err
-  module.exports = null;
+	// catch the ref err
+	module.exports = null;
 }

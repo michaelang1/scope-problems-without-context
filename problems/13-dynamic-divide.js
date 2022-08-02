@@ -19,12 +19,13 @@ divideByFive(50); // returns 10
 ***********************************************************************/
 
 // your code here
+const dynamicDivide = divider => num => num / divider;
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
-  module.exports = dynamicDivide;
+	module.exports = dynamicDivide;
 } catch (e) {
-  // catch the ref err
-  module.exports = null;
+	// catch the ref err
+	module.exports = null;
 }
